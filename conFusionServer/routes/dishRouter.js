@@ -74,6 +74,7 @@ dishRouter.route('/:dishId')
     }, (err) => next(err))
     .catch((err) => next(err));
 })
+
 .delete((req, res, next) => {
     Dishes.findByIdAndRemove(req.params.dishId)
     .then((resp) => {
